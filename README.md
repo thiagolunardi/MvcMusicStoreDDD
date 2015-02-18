@@ -29,5 +29,5 @@ The same known [MusicStore](https://github.com/aspnet/MusicStore/) application, 
 
 # Collaborators
 
-[Thiago Lunardi](http://thiagolunardi.net)
-[Eduardo Pires](http://eduardopires.net.br)
+* [Thiago Lunardi](http://thiagolunardi.net)
+* [Eduardo Pires](http://eduardopires.net.br)
