@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CEE7B22F-C3FF-4F1E-92B0-8B30F52B3F1E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MvcMusicStore.Domain</RootNamespace>
+    <AssemblyName>MvcMusicStore.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.RegularExpressions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Album.cs" />
+    <Compile Include="Entities\Artist.cs" />
+    <Compile Include="Entities\Cart.cs" />
+    <Compile Include="Entities\EqualityCompare\ArtistComparer.cs" />
+    <Compile Include="Entities\EqualityCompare\AlbumComparer.cs" />
+    <Compile Include="Entities\Genre.cs" />
+    <Compile Include="Entities\Order.cs" />
+    <Compile Include="Entities\OrderDetail.cs" />
+    <Compile Include="Entities\Specifications\AlbumSpecs\AlbumPriceMustBeLowerThan100Spec.cs" />
+    <Compile Include="Entities\Specifications\AlbumSpecs\AlbumArtUrlLenthMustBeLowerThan1024Spec.cs" />
+    <Compile Include="Entities\Specifications\AlbumSpecs\AlbumTitleLenthMustBeLowerThan160Spec.cs" />
+    <Compile Include="Entities\Specifications\AlbumSpecs\AlbumTitleIsRequiredSpec.cs" />
+    <Compile Include="Entities\Specifications\AlbumSpecs\AlbumPriceIsRequiredSpec.cs" />
+    <Compile Include="Entities\Specifications\ArtistSpecs\ArtistNameIsRequiredSpec.cs" />
+    <Compile Include="Entities\Specifications\CartSpecs\CartCountShouldBeGreaterThanZeroSpec.cs" />
+    <Compile Include="Entities\Specifications\GenreSpecs\GenreDescriptionIsRequiredSpec.cs" />
+    <Compile Include="Entities\Specifications\GenreSpecs\OrderAddressIsRequiredSpec.cs" />
+    <Compile Include="Entities\Specifications\OrderDetailSpecs\OrderDetailUnityPriceShouldBeGraterThanZeroSpec.cs" />
+    <Compile Include="Entities\Specifications\OrderDetailSpecs\OrderDetailQuantityShouldBeGraterThanZeroSpec.cs" />
+    <Compile Include="Entities\Specifications\OrderSpecs\OrderPhoneLengthMustBeLowerThan24Spec.cs" />
+    <Compile Include="Entities\Specifications\OrderSpecs\OrderCountryLengthMustBeLowerThan40Spec.cs" />
+    <Compile Include="Entities\Specifications\OrderSpecs\OrderPostalCodeLengthMustBeLowerThan10Spec.cs" />
+    <Compile Include="Entities\Specifications\OrderSpecs\OrderStateLengthMustBeLowerThan40Spec.cs" />
+    <Compile Include="Entities\Specifications\OrderSpecs\OrderCityLengthMustBeLowerThan40Spec.cs" />
+    <Compile Include="Entities\Specifications\OrderSpecs\OrderAddressLengthMustBeLowerThan70Spec.cs" />
+    <Compile Include="Entities\Specifications\OrderSpecs\OrderLastNameLengthMustBeLowerThan160Spec.cs" />
+    <Compile Include="Entities\Specifications\OrderSpecs\OrderFirstNameLengthMustBeLowerThan160Spec.cs" />
+    <Compile Include="Entities\Specifications\OrderSpecs\OrderTotalShouldBeGreaterThanZero.cs" />
+    <Compile Include="Entities\Specifications\OrderSpecs\OrderEmailShouldbeValidEmailAddressSpec.cs" />
+    <Compile Include="Entities\Specifications\OrderSpecs\OrderEmailIsRequiredSpec.cs" />
+    <Compile Include="Entities\Specifications\OrderSpecs\OrderPhoneIsRequiredSpec.cs" />
+    <Compile Include="Entities\Specifications\OrderSpecs\OrderAddressIsRequiredSpec.cs" />
+    <Compile Include="Entities\Specifications\OrderSpecs\OrderPostalCodeIsRequiredSpec.cs" />
+    <Compile Include="Entities\Specifications\OrderSpecs\OrderStateIsRequiredSpec.cs" />
+    <Compile Include="Entities\Specifications\OrderSpecs\OrderCityIsRequiredSpec.cs" />
+    <Compile Include="Entities\Specifications\OrderSpecs\OrderCountryIsRequiredSpec.cs" />
+    <Compile Include="Entities\Specifications\OrderSpecs\OrderLastNameIsRequiredSpec.cs" />
+    <Compile Include="Entities\Specifications\OrderSpecs\OrderFirstNameIsRequiredSpec.cs" />
+    <Compile Include="Entities\Specifications\OrderSpecs\OrderUsernameIsRequiredSpec.cs" />
+    <Compile Include="Entities\Specifications\OrderSpecs\OrderDateShouldBeLowerThanTodaySpec.cs" />
+    <Compile Include="Entities\Validations\GenreIsValidValidation.cs" />
+    <Compile Include="Entities\Validations\OrderDetailIsValidValidation.cs" />
+    <Compile Include="Entities\Validations\OrderIsValidValidation.cs" />
+    <Compile Include="Entities\Validations\CartIsValidValidation.cs" />
+    <Compile Include="Entities\Validations\ArtistIsValidValidation.cs" />
+    <Compile Include="Entities\Validations\AlbumIsValidValidation.cs" />
+    <Compile Include="Interfaces\Repository\Common\IReadOnlyRepository.cs" />
+    <Compile Include="Interfaces\Repository\Common\IRepository.cs" />
+    <Compile Include="Interfaces\Repository\IGenreRepository.cs" />
+    <Compile Include="Interfaces\Repository\IOrderDetailRepository.cs" />
+    <Compile Include="Interfaces\Repository\IOrderRepository.cs" />
+    <Compile Include="Interfaces\Repository\ICartRepository.cs" />
+    <Compile Include="Interfaces\Repository\IAlbumRepository.cs" />
+    <Compile Include="Interfaces\Repository\IArtistRepository.cs" />
+    <Compile Include="Interfaces\Repository\ReadOnly\IGenreReadOnlyRepository.cs" />
+    <Compile Include="Interfaces\Repository\ReadOnly\IOrderDetailReadOnlyRepository.cs" />
+    <Compile Include="Interfaces\Repository\ReadOnly\IOrderReadOnlyRepository.cs" />
+    <Compile Include="Interfaces\Repository\ReadOnly\ICartReadOnlyRepository.cs" />
+    <Compile Include="Interfaces\Repository\ReadOnly\IAlbumReadOnlyRepository.cs" />
+    <Compile Include="Interfaces\Repository\ReadOnly\IArtistReadOnlyRepository.cs" />
+    <Compile Include="Interfaces\Service\Common\IReadOnlyService.cs" />
+    <Compile Include="Interfaces\Service\Common\IService.cs" />
+    <Compile Include="Interfaces\Service\IAlbumService.cs" />
+    <Compile Include="Interfaces\Service\IGenreService.cs" />
+    <Compile Include="Interfaces\Service\IOrderDetailService.cs" />
+    <Compile Include="Interfaces\Service\IOrderService.cs" />
+    <Compile Include="Interfaces\Service\ICartService.cs" />
+    <Compile Include="Interfaces\Service\IArtistService.cs" />
+    <Compile Include="Interfaces\Specification\ISpecification.cs" />
+    <Compile Include="Interfaces\Validation\ISelfValidation.cs" />
+    <Compile Include="Interfaces\Validation\IValidation.cs" />
+    <Compile Include="Interfaces\Validation\IValidationRule.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\GenreService.cs" />
+    <Compile Include="Services\OrderDetailService.cs" />
+    <Compile Include="Services\OrderService.cs" />
+    <Compile Include="Services\CartService.cs" />
+    <Compile Include="Services\ArtistService.cs" />
+    <Compile Include="Services\AlbumService.cs" />
+    <Compile Include="Services\Helpers\LinqExtentions.cs" />
+    <Compile Include="Services\Common\ReadOnlyService.cs" />
+    <Compile Include="Services\Common\Service.cs" />
+    <Compile Include="Validation\ValidationError.cs" />
+    <Compile Include="Entities\Validations\ValidationMessages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ValidationMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Validation\ValidationResult.cs" />
+    <Compile Include="Validation\Validation.cs" />
+    <Compile Include="Validation\ValidationRule.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Entities\Validations\ValidationMessages.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ValidationMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
