@@ -1,6 +1,6 @@
 # MVC MusicStore Application
 
-The same known [MusicStore](https://github.com/aspnet/MusicStore/) application, published by [Microsoft](http://microsoft.github.io/), but wrotten using tons of design and architectural patterns to force the delivery of a high quality and responsable development.
+The same known [MusicStore](https://github.com/aspnet/MusicStore/) application, published by [Microsoft](http://microsoft.github.io/), but wrotten using tons of design and architectural patterns to force the delivery of a high quality code and provide a responsable development.
 
 # Implemented Tools
 
