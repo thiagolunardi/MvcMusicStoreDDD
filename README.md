@@ -1,6 +1,17 @@
-# MVC MusicStore application
+# MVC MusicStore Application
 
 The same known [MusicStore](https://github.com/aspnet/MusicStore/) application, published by [Microsoft](http://microsoft.github.io/), but wrotten using tons of design and architectural patterns to force the delivery of a high quality and responsable development.
+
+# Implemented Tools
+
+* ASP.NET MVC 5.2.3
+* EntityFramework 6.1.2
+* ADO.NET 4.0
+* Dapper 1.38
+* SQL Server Compact 4.0
+* AutoMapper 3.3.1
+* Ninject 3.2.2.0
+* Service Locator 1.3
 
 # Patterns Applied 
 
@@ -15,13 +26,3 @@ The same known [MusicStore](https://github.com/aspnet/MusicStore/) application, 
 * TDD - Teste Driven Design
 * CrossCutting
 * Invertion of Control
-
-# Implemented Tools
-
-* AutoMapper
-* Ninject
-* Dapper
-* EntityFramework
-* ADO.NET
-* Service Locator
-* SQL Server Compact
