@@ -26,3 +26,8 @@ The same known [MusicStore](https://github.com/aspnet/MusicStore/) application, 
 * TDD - Teste Driven Design
 * CrossCutting
 * Invertion of Control
+
+# Collaborators
+
+[Thiago Lunardi](http://thiagolunardi.net)
+[Eduardo Pires](http://eduardopires.net.br)
