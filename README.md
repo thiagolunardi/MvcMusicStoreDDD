@@ -32,3 +32,7 @@ The same known [MusicStore](https://github.com/aspnet/MusicStore/) application, 
 
 * [Thiago Lunardi](http://thiagolunardi.net)
 * [Eduardo Pires](http://eduardopires.net.br)
+
+# Try it 
+
+[![Deploy to Azure](http://azuredeploy.net/deploybutton.png)](https://azuredeploy.net/)
