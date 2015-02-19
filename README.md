@@ -25,6 +25,7 @@ The same known [MusicStore](https://github.com/aspnet/MusicStore/) application, 
 * Self Validation
 * TDD - Teste Driven Design
 * CrossCutting
+* Dependency Injection
 * Invertion of Control
 
 # Collaborators
