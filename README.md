@@ -28,6 +28,11 @@ The same known [MusicStore](https://github.com/aspnet/MusicStore/) application, 
 * Dependency Injection
 * Invertion of Control
 
+# This is BETA
+
+<blockquote>"These are currently an early work in progress. It's been pushed here so contributors can create pull requests,
+etc. Please don't complain unless you are willing to help ;)" - by Vaughn Vernon</blockquote>
+
 # Collaborators
 
 * [Thiago Lunardi](http://thiagolunardi.net)
