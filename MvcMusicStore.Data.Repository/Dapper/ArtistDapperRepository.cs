@@ -38,11 +38,5 @@ namespace MvcMusicStore.Data.Repository.Dapper
                 return artist;
             }
         }
-
-        public void Dispose()
-        {
-            GC.SuppressFinalize(this);
-        }
-
     }
 }

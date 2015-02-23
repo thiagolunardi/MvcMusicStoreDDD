@@ -60,11 +60,5 @@ namespace MvcMusicStore.Data.Repository.Dapper
                 return albuns;
             }
         }
-
-        public void Dispose()
-        {
-            GC.SuppressFinalize(this);
-        }
-
     }
 }

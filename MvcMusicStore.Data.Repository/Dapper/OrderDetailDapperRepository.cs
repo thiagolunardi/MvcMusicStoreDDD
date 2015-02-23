@@ -62,10 +62,5 @@ namespace MvcMusicStore.Data.Repository.Dapper
                 return orderDetails;
             }
         }
-
-        public void Dispose()
-        {
-            GC.SuppressFinalize(this);
-        }
     }
 }

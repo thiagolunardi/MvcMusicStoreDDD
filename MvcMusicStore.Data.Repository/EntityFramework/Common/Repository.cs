@@ -10,7 +10,7 @@ using MvcMusicStore.Domain.Interfaces.Repository.Common;
 
 namespace MvcMusicStore.Data.Repository.EntityFramework.Common
 {
-    public class Repository<TEntity> : IRepository<TEntity>
+    public class Repository<TEntity> : IRepository<TEntity>, IDisposable
         where TEntity : class
     {
         private readonly IDbContext _dbContext;

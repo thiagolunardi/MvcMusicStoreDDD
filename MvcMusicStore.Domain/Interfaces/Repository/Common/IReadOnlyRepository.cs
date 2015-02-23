@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 
 namespace MvcMusicStore.Domain.Interfaces.Repository.Common
 {
-    public interface IReadOnlyRepository<TEntity> : IDisposable 
+    public interface IReadOnlyRepository<TEntity> 
         where TEntity : class
     {
         TEntity Get(int id);

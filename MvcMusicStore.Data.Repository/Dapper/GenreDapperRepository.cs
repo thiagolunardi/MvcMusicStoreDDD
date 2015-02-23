@@ -75,11 +75,5 @@ namespace MvcMusicStore.Data.Repository.Dapper
                 return genres;
             }
         }
-
-        public void Dispose()
-        {
-            GC.SuppressFinalize(this);
-        }
-
     }
 }
