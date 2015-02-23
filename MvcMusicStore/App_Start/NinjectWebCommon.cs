@@ -1,30 +1,32 @@
-﻿using System;
-using System.Web;
-using Microsoft.Web.Infrastructure.DynamicModuleHelper;
-using MvcMusicStore;
 using MvcMusicStore.CrossCutting.InversionOfControl;
-using Ninject;
-using Ninject.Web.Common;
 
-[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(NinjectWebCommon), "Start")]
-[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(NinjectWebCommon), "Stop")]
+[assembly: WebActivatorEx.PreApplicationStartMethod(typeof(MvcMusicStore.App_Start.NinjectWebCommon), "Start")]
+[assembly: WebActivatorEx.ApplicationShutdownMethodAttribute(typeof(MvcMusicStore.App_Start.NinjectWebCommon), "Stop")]
 
-namespace MvcMusicStore
+namespace MvcMusicStore.App_Start
 {
-    public static class NinjectWebCommon
+    using System;
+    using System.Web;
+
+    using Microsoft.Web.Infrastructure.DynamicModuleHelper;
+
+    using Ninject;
+    using Ninject.Web.Common;
+
+    public static class NinjectWebCommon 
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();
 
         /// <summary>
         /// Starts the application
         /// </summary>
-        public static void Start()
+        public static void Start() 
         {
             DynamicModuleUtility.RegisterModule(typeof(OnePerRequestHttpModule));
             DynamicModuleUtility.RegisterModule(typeof(NinjectHttpModule));
             bootstrapper.Initialize(CreateKernel);
         }
-
+        
         /// <summary>
         /// Stops the application.
         /// </summary>
@@ -32,7 +34,7 @@ namespace MvcMusicStore
         {
             bootstrapper.ShutDown();
         }
-
+        
         /// <summary>
         /// Creates the kernel that will manage your application.
         /// </summary>
@@ -40,7 +42,7 @@ namespace MvcMusicStore
         private static IKernel CreateKernel()
         {
             var ioc = new IoC();
-            var kernel = ioc.GetNinjectModules();
+            var kernel = ioc.Kernel;
             try
             {
                 kernel.Bind<Func<IKernel>>().ToMethod(ctx => () => new Bootstrapper().Kernel);
@@ -62,6 +64,6 @@ namespace MvcMusicStore
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-        }
+        }        
     }
 }
