@@ -27,6 +27,7 @@ The same known [MusicStore](https://github.com/aspnet/MusicStore/) application, 
 * CrossCutting
 * Dependency Injection
 * Invertion of Control
+* Service Locator
 
 # This is BETA
 
