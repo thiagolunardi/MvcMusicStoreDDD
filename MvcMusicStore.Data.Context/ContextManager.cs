@@ -7,6 +7,11 @@ namespace MvcMusicStore.Data.Context
         where TContext : IDbContext, new()
     {
         private const string ContextKey = "ContextManager.Context";
+        
+        public ContextManager()
+        {
+            ContextKey = "ContextKey." + typeof(TContext).Name;
+        }
 
         public IDbContext GetContext()
         {
