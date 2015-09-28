@@ -69,21 +69,30 @@ namespace MvcMusicStore.Domain.Services.Common
 
         #region CRUD Methods
 
-        public virtual ValidationResult Add(TEntity department)
+  public virtual ValidationResult Add(TEntity entity)
         {
             if (!ValidationResult.IsValid)
                 return ValidationResult;
 
-            _repository.Add(department);
+            var selfValidationEntity = entity as ISelfValidation;
+            if (selfValidationEntity != null && !selfValidationEntity.IsValid)
+                return selfValidationEntity.ValidationResult;
+
+
+            _repository.Add(entity);
             return _validationResult;
         }
 
-        public virtual ValidationResult Update(TEntity department)
+        public virtual ValidationResult Update(TEntity entity)
         {
             if (!ValidationResult.IsValid)
                 return ValidationResult;
 
-            _repository.Update(department);
+            var selfValidationEntity = entity as ISelfValidation;
+            if (selfValidationEntity != null && !selfValidationEntity.IsValid)
+                return selfValidationEntity.ValidationResult;
+
+            _repository.Update(entity);
             return _validationResult;
         }
 
