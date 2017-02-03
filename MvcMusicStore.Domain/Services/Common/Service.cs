@@ -4,6 +4,7 @@ using System.Linq.Expressions;
 using MvcMusicStore.Domain.Interfaces.Repository.Common;
 using MvcMusicStore.Domain.Interfaces.Service.Common;
 using MvcMusicStore.Domain.Validation;
+using MvcMusicStore.Domain.Interfaces.Validation;
 
 namespace MvcMusicStore.Domain.Services.Common
 {

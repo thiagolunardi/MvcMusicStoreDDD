@@ -1,4 +1,5 @@
-﻿using MvcMusicStore.Domain.Interfaces.Validation;
+﻿using MvcMusicStore.Domain.Interfaces.Specification;
+using MvcMusicStore.Domain.Interfaces.Validation;
 
 namespace MvcMusicStore.Domain.Validation
 {

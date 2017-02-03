@@ -6,7 +6,7 @@ namespace MvcMusicStore.Data.Context
     public class ContextManager<TContext> : IContextManager<TContext>
         where TContext : IDbContext, new()
     {
-        private const string ContextKey = "ContextManager.Context";
+        private readonly string ContextKey;
         
         public ContextManager()
         {

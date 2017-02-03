@@ -1,4 +1,4 @@
-﻿namespace MvcMusicStore.Domain.Interfaces.Validation
+﻿namespace MvcMusicStore.Domain.Interfaces.Specification
 {
     public interface ISpecification<in TEntity>
     {
