@@ -1,4 +1,4 @@
-﻿using MvcMusicStore.Domain.Interfaces.Validation;
+﻿using MvcMusicStore.Domain.Interfaces.Specification;
 
 namespace MvcMusicStore.Domain.Entities.Specifications.OrderDetailSpecs
 {

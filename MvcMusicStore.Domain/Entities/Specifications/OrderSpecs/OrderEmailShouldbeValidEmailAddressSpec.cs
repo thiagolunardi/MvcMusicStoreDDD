@@ -1,5 +1,5 @@
 ﻿using System.Text.RegularExpressions;
-using MvcMusicStore.Domain.Interfaces.Validation;
+using MvcMusicStore.Domain.Interfaces.Specification;
 
 namespace MvcMusicStore.Domain.Entities.Specifications.OrderSpecs
 {
