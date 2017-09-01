@@ -1,4 +1,4 @@
-> This sample is outdated, please refer to [Equinox Project](https://github.com/EduardoPires/EquinoxProject) for the lastes state of the art.
+> This sample is outdated, please refer to [Equinox Project](https://github.com/EduardoPires/EquinoxProject) for the lastest state of the art.
 
 # MVC MusicStore Application
 
