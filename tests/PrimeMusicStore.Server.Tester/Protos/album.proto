@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+option csharp_namespace = "PrimeMusicStore.Service";
+
+package prime.album;
+
+// The album service definition.
+service AlbumService {
+  // Get all available albums
+  rpc GetAll (EmptyRequest) returns (stream AlbumReply);
+  // Get top 5 selling
+  rpc GetTopSellingAlbums (IntValue) returns (stream AlbumReply);
+}
+
+
+message AlbumReply {
+  string Title = 1;
+}
+
+message IntValue {
+  bytes value = 1;
+}
+
+// An empty message that you can re-use to avoid defining duplicated empty
+// messages in your project.
+message EmptyRequest { }
